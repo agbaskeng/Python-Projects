@@ -1,8 +1,8 @@
 initial_gross_income = float(input("Gross Income: "))
-pension = 0.08 * initial_gross_income
-nhf = 0
-nhis = 0
-life_assurance_p = 0
+pension = float(input("Pension: "))
+nhf = float(input("National Housing Fund: "))
+nhis = float(input("National Health Insurance Scheme: "))
+life_assurance_p = float(input("Life Assurance Premium: "))
 gross_income_less_relifs = initial_gross_income - (pension + nhf + nhis + life_assurance_p)
 print("Gross Income (Less reliefs) :", gross_income_less_relifs)
 
@@ -16,10 +16,6 @@ taxable_income = initial_gross_income - (cra + pension)
 tr = cra + pension + nhf + nhis + life_assurance_p
 
 print("Consolidated Relief Allowance:", cra)
-print("Pension:", pension)
-print("National Housing Fund:", nhf)
-print("National Health Insurance Scheme:", nhis)
-print("Life Assurance Premium: ", life_assurance_p)
 print(f"Total reliefs: {tr}")
 print("Taxable Income:", taxable_income)
 
